@@ -3,7 +3,22 @@ guid: 6b31d35c5a67df24c9c477b59b19c0fd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GARRAS
+    second: {fileID: 2100000, guid: d3bb48c279bb0a743ac4f4c2cde23054, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 10a2fd7c5455fb1479e4d86b9cecbe30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cerrojo
+    second: {fileID: 2100000, guid: f9a359bf0b66e2d4890f3ca9d6f26ed2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

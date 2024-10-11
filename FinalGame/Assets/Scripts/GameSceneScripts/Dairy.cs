@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Diary : MonoBehaviour
 {
-    public string diaryContent; // The content of this specific diary
+    public string diaryContent; 
 
-    private DiaryManager diaryManager; // Reference to the DiaryManager
-
+    private DiaryManager diaryManager; 
     private void Start()
     {
-        // Find the DiaryManager in the scene (you can also manually assign this)
+       
         diaryManager = FindObjectOfType<DiaryManager>();
     }
 
@@ -18,7 +17,7 @@ public class Diary : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Show the diary content in the DiaryManager's panel
+           
             if (diaryManager != null)
             {
                 diaryManager.ShowDiary(diaryContent);

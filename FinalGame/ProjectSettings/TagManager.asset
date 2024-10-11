@@ -7,6 +7,7 @@ TagManager:
   - Panel 2
   - Panel 1
   - Panel 3
+  - PickUp
   layers:
   - Default
   - TransparentFX

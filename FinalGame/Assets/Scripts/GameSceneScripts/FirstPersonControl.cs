@@ -160,7 +160,7 @@ private void OnEnable()
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
         RaycastHit hit;
 
-        Debug.DrawRay(playerCamera.position, playerCamera.forward * pickUpRange, Color.red, 2f);
+        Debug.DrawRay(playerCamera.position, playerCamera.forward * pickUpRange, Color.red, 5f);
 
         if (Physics.Raycast(ray, out hit, pickUpRange))
         {

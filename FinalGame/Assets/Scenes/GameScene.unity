@@ -9538,7 +9538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: 
+  diaryContent: "Diary Entry - Day 44 I saw another soldier today\u2014Emily. She\u2019s
+    been wandering for days, but I could tell she was slipping away. The maze must
+    have affected her mind. She mentioned something about seeing our friends in the
+    walls, like they were trapped inside, begging for help. I wanted to dismiss it
+    as madness, but I saw it too. Faint faces flickering in the shadows, lost souls
+    forever bound to this place. "
 --- !u!65 &1032679769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14589,7 +14594,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: 
+  diaryContent: "Diary Entry - Day 43 I think I\u2019ve finally pieced it together.
+    The aliens use the maze to observe us, but it\u2019s more than just a test; it\u2019s
+    a way to harvest our fear and despair. Each section we pass through seems designed
+    to exploit our worst memories. I caught a glimpse of a holographic display yesterday,
+    showing our reactions to different scenarios. They\u2019re studying us like scientists
+    with lab rats."
 --- !u!1 &1498656086
 GameObject:
   m_ObjectHideFlags: 0
@@ -19195,7 +19205,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: 
+  diaryContent: "Diary Entry - Day 46 I made it to a new section of the maze today\u2014a
+    garden of sorts. It\u2019s surreal, a stark contrast to the cold, metallic corridors.
+    Plants that shouldn\u2019t exist on Earth bloom here, glowing softly under a
+    light that feels both warm and unnerving. I wonder if this is where they harvest
+    our fear\u2014if they\u2019re using the energy from our despair to sustain this
+    alien flora."
 --- !u!65 &1950038863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21088,7 +21103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: 
+  diaryContent: "Diary Entry - Day 45 There\u2019s a pattern to the maze. I started
+    mapping it out based on the layouts I\u2019ve seen over the past few days. It\u2019s
+    almost like a blueprint of some larger design. I believe there\u2019s a central
+    chamber where they gather, possibly where they monitor us. I feel drawn to it.
+    If I can get there, maybe I can disable the controls or at least learn more about
+    what they want from us.  "
 --- !u!65 &2071121924
 BoxCollider:
   m_ObjectHideFlags: 0

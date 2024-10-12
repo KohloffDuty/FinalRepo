@@ -3896,7 +3896,7 @@ RectTransform:
   m_GameObject: {fileID: 375268472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 9.186138, y: 9.186138, z: 9.186138}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1472275021}
@@ -3926,7 +3926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3935,7 +3935,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4279045390
   m_fontColor: {r: 0.05660379, g: 0.052865803, b: 0.052865803, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3953,15 +3953,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 3
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3989,7 +3989,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 19.562233, y: -22.082813, z: 11.439728, w: -29.328587}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6869,7 +6869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1747789494}
-  remainingTime: 3
+  remainingTime: 300
   gameOverUI: {fileID: 442818163}
 --- !u!1 &738162728
 GameObject:
@@ -9783,12 +9783,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: "Diary Entry - Day 44 I saw another soldier today\u2014Emily. She\u2019s
-    been wandering for days, but I could tell she was slipping away. The maze must
-    have affected her mind. She mentioned something about seeing our friends in the
-    walls, like they were trapped inside, begging for help. I wanted to dismiss it
-    as madness, but I saw it too. Faint faces flickering in the shadows, lost souls
-    forever bound to this place. "
+  diaryContent: "Day 53 I overheard two aliens discussing something in their language,
+    but I caught a word\u2014\u201CEmbrace.\u201D They\u2019re going to \u201Cembrace\u201D
+    the end of the world, whatever that means. Are they planning to bring Earth into
+    this maze, or are they preparing for something much worse?  Diary Entry - Day
+    46 I made it to a new section of the maze today\u2014a garden of sorts. It\u2019s
+    surreal, a stark contrast to the cold, metallic corridors. Plants that shouldn\u2019t
+    exist on Earth bloom here, glowing softly under a light that feels both warm
+    and unnerving. I wonder if this is where they harvest our fear\u2014if they\u2019re
+    using the energy from our despair to sustain this alien flora.  I found a creature
+    lurking in the shadows, a small animal that looked like it was made of shadows
+    and light. It stared at me, and I felt a connection. Could it be a remnant of
+    what was once here? It might be a guide, or maybe just another victim. I\u2019ll
+    keep an eye on it; perhaps it knows secrets of this maze that we don\u2019t. 
+    Diary Entry - Day 47 I stumbled upon a group of soldiers today, but they looked
+    different\u2014hollow-eyed and disoriented, as if they had succumbed to the maze's
+    madness. They mentioned a way out, a path that appears only during the \u201CGreat
+    Harvest.\u201D I can\u2019t trust them fully; I fear they\u2019re just mirages
+    created by the maze to lead us astray.  I overheard whispers again, this time
+    clearer. They\u2019re preparing for an \u201Cascension,\u201D a plan to transform
+    us into something greater. Are they using us to fuel their own evolution? The
+    longer I stay here, the more I realize we\u2019re just pieces in their game. 
+    I need to find that central chamber. The answers are there, and I must confront
+    them before\_it\u2019s\_too\_late. -Phil"
 --- !u!65 &1032679769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15044,12 +15061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: "Diary Entry - Day 43 I think I\u2019ve finally pieced it together.
-    The aliens use the maze to observe us, but it\u2019s more than just a test; it\u2019s
-    a way to harvest our fear and despair. Each section we pass through seems designed
-    to exploit our worst memories. I caught a glimpse of a holographic display yesterday,
-    showing our reactions to different scenarios. They\u2019re studying us like scientists
-    with lab rats."
+  diaryContent: "Diary Entry - Day 44 I saw another soldier today\u2014Emily. She\u2019s
+    been wandering for days, but I could tell she was slipping away. The maze must
+    have affected her mind. She mentioned something about seeing our friends in the
+    walls, like they were trapped inside, begging for help. I wanted to dismiss it
+    as madness, but I saw it too. Faint faces flickering in the shadows, lost souls
+    forever bound to this place. "
 --- !u!1 &1498656086
 GameObject:
   m_ObjectHideFlags: 0
@@ -19790,12 +19807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: "Diary Entry - Day 46 I made it to a new section of the maze today\u2014a
-    garden of sorts. It\u2019s surreal, a stark contrast to the cold, metallic corridors.
-    Plants that shouldn\u2019t exist on Earth bloom here, glowing softly under a
-    light that feels both warm and unnerving. I wonder if this is where they harvest
-    our fear\u2014if they\u2019re using the energy from our despair to sustain this
-    alien flora."
+  diaryContent: Day 68  I have been wandering around this maze avoiding intricate
+    traps. I finally found the aliens den. I can finally destory it and....
 --- !u!65 &1950038863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21688,12 +21701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0266f2c4920843a44b498fcf48ade5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diaryContent: "Diary Entry - Day 45 There\u2019s a pattern to the maze. I started
-    mapping it out based on the layouts I\u2019ve seen over the past few days. It\u2019s
-    almost like a blueprint of some larger design. I believe there\u2019s a central
-    chamber where they gather, possibly where they monitor us. I feel drawn to it.
-    If I can get there, maybe I can disable the controls or at least learn more about
-    what they want from us.  "
+  diaryContent: 'Diary Entry- Day 1                                                                                                                                                                       
+    The aliens use the maze to observe us to harvest our fear and despair. Lets find
+    our way and find out what they plan to do with us.                                                   
+    -Mark             '
 --- !u!65 &2071121924
 BoxCollider:
   m_ObjectHideFlags: 0

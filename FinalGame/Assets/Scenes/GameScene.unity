@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 47249267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19003636, y: 0, z: -106.214676}
+  m_LocalPosition: {x: 0.19, y: 0, z: -106.12}
   m_LocalScale: {x: 0.67224956, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -746,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 60060893}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.51503915, y: 0.012976569, z: -112.282234}
+  m_LocalPosition: {x: 0.515, y: 0.001, z: -111.87}
   m_LocalScale: {x: 12.216975, y: 1, z: 0.026800456}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5778,7 +5778,7 @@ Transform:
   m_GameObject: {fileID: 517470390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.78495914, y: 0, z: 58.053616}
+  m_LocalPosition: {x: -0.81, y: 0, z: 58.1}
   m_LocalScale: {x: 23.32963, y: 1, z: 0.026800456}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11726,7 +11726,7 @@ MonoBehaviour:
   attackRange: 10
   meleeRange: 2
   attackCooldown: 2
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 2548912306507015845, guid: b32fcfafbb7fe6c43b7aac2bf48a9ade, type: 3}
   firePoint: {fileID: 0}
   projectileSpeed: 10
 --- !u!4 &1069591608 stripped
@@ -18406,7 +18406,7 @@ Transform:
   m_GameObject: {fileID: 1526037874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.16152935, y: 0.012976569, z: -111.62211}
+  m_LocalPosition: {x: -0.155, y: -0.003, z: -111.33}
   m_LocalScale: {x: 11.492868, y: 1, z: 0.026800456}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18616,7 +18616,7 @@ Transform:
   m_GameObject: {fileID: 1553250830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.44476902, y: 0.012976569, z: -88.073685}
+  m_LocalPosition: {x: 0.44476902, y: -0.002, z: -88.073685}
   m_LocalScale: {x: 11.787506, y: 1, z: 0.026800456}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19593,7 +19593,7 @@ MonoBehaviour:
   attackRange: 10
   meleeRange: 2
   attackCooldown: 2
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 2548912306507015845, guid: b32fcfafbb7fe6c43b7aac2bf48a9ade, type: 3}
   firePoint: {fileID: 0}
   projectileSpeed: 10
 --- !u!1 &1649943986

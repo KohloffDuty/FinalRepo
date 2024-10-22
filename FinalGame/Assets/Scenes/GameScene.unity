@@ -8320,7 +8320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1747789494}
-  remainingTime: 25
+  remainingTime: 300
   gameOverUI: {fileID: 442818163}
 --- !u!1 &738162728
 GameObject:

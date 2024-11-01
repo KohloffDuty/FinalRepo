@@ -201,10 +201,7 @@ private void OnEnable()
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = firePoint.forward * projectileSpeed;
             Destroy(projectile, 1f);
-            Debug.Log("projectile fired");
-            rb.useGravity = false;
-            Debug.Log($"Projectile velocity: {rb.velocity}");
-            Debug.Log("Projectile scheduled for destruction");
+            Debug.Log("jjjjjjjjjjjjjj");
         }
 
     }

@@ -200,8 +200,8 @@ private void OnEnable()
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = firePoint.forward * projectileSpeed;
-            Destroy(projectile, 1f);
-            Debug.Log("jjjjjjjjjjjjjj");
+            Destroy(projectile, 3f);
+            Debug.Log("Laser Shot");
         }
 
     }

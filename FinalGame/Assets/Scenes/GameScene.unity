@@ -4012,6 +4012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  respawnPoint: {fileID: 1552155857}
 --- !u!1001 &310447370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4805,9 +4806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &360857891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12854,9 +12852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1069591607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15439,9 +15434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1271788610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15678,9 +15670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1282208975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16386,9 +16375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1312946305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17347,9 +17333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!4 &1375433011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ea9b2fcd25c1148ab822f2e31b1e33, type: 3}
@@ -19838,6 +19821,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49b34393cda0612408a173415cb30d0d, type: 3}
   m_PrefabInstance: {fileID: 1781598325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552155856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552155857}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552155857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552155856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0025775053, y: 0.9251003, z: -0.027152082, w: 0.37874195}
+  m_LocalPosition: {x: -372.55072, y: 16.04, z: 411.12}
+  m_LocalScale: {x: 13.564749, y: 24.688066, z: 16.125326}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553250830
 GameObject:
   m_ObjectHideFlags: 0
@@ -20895,9 +20909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1646450504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23267,9 +23278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945b9cfcd2b195444a2b909a52084c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damageAmount: 20
-  chaseRange: 10
 --- !u!114 &1806546305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27573,6 +27581,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 302203620}
+  - {fileID: 1552155857}
   - {fileID: 631250176}
   - {fileID: 834807805}
   - {fileID: 1948225448}

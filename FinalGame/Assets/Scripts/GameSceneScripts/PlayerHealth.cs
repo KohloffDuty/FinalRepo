@@ -3,7 +3,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
+    public Transform respawnPoint;
     private float currentHealth;
+    private Rigidbody rb;
     public float GetCurrentHealth()
     {
         return currentHealth;
@@ -22,26 +24,28 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            DieAndRespawn();
         }
     }
 
-
-    private void Die()
+    private void DieAndRespawn()
     {
-        Debug.Log("Player has died.");
+        Debug.Log("Player has died.Respawning");
+        currentHealth = maxHealth;
 
-        Destroy(gameObject);
-    }
-
-
-    public void Heal(float amount)
-    {
-        currentHealth += amount;
-        if (currentHealth > maxHealth)
+        if (rb != null)
         {
-            currentHealth = maxHealth;
-            Debug.Log("Player healed: " + amount + " | Current Health: " + currentHealth);
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.position = respawnPoint.position;
+            rb.rotation = respawnPoint.rotation;
+        }
+
+        else
+        {
+            transform.position = respawnPoint.position;
+            transform.rotation = respawnPoint.rotation;
         }
     }
 }
+

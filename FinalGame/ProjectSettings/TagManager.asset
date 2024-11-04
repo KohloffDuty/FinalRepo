@@ -9,6 +9,7 @@ TagManager:
   - Panel 3
   - PickUp
   - Gun
+  - Enemy
   layers:
   - Default
   - TransparentFX

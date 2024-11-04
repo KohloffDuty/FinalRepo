@@ -30,6 +30,7 @@ public class FirstPersonControl : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 20f;
     public float pickUpRange = 3f;
+    public float damage = 20f;
     private bool holdingGun = false;
 
 
@@ -193,15 +194,21 @@ private void OnEnable()
     }
     public void Shoot()
     {
-        if (holdingGun == true)
+        if (holdingGun)
 
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = firePoint.forward * projectileSpeed;
+
+            Projectile projectileComponent = projectile.GetComponent<Projectile>();
+            if (projectileComponent != null)
+            {
+                projectileComponent.damage = damage;
+            }
             Destroy(projectile, 3f);
-            Debug.Log("Laser Shot");
+            Debug.Log("Projectile shot with damage: + damage");
         }
 
     }

@@ -3940,6 +3940,7 @@ MonoBehaviour:
   firePoint: {fileID: 1116950133}
   projectileSpeed: -0.59
   pickUpRange: 86.9
+  damage: 20
   holdPosition: {fileID: 834791249}
   crouchHeight: 1
   standingHeight: 2
@@ -10484,6 +10485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienEnemy (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9739779365d5c04c89b5c6bf95ace35, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10500,6 +10505,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9739779365d5c04c89b5c6bf95ace35, type: 3}
       insertIndex: -1
       addedObject: {fileID: 847549339}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9739779365d5c04c89b5c6bf95ace35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 847549340}
   m_SourcePrefab: {fileID: 100100000, guid: d9739779365d5c04c89b5c6bf95ace35, type: 3}
 --- !u!1 &847549333 stripped
 GameObject:
@@ -10554,6 +10562,19 @@ MonoBehaviour:
   moveSpeed: 28.6
   attackDamage: 10
   chaseRange: 20
+--- !u!114 &847549340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847549333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf1ee41ba93a0246b9a3510e7b70908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
 --- !u!1 &863121804
 GameObject:
   m_ObjectHideFlags: 0

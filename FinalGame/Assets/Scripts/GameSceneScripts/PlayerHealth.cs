@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public Transform respawnPoint;
-    public Text healthText; // Reference to the UI Text component (or use TextMeshPro)
+   public Slider healthSlider; // Reference to the UI Text component (or use TextMeshPro)
     private float currentHealth;
     private Rigidbody rb;
 
@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Player took damage: " + damage + " | Current Health: " + currentHealth);
 
         UpdateHealthUI(); // Update the health display after taking damage
@@ -55,9 +56,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        if (healthText != null)
+        if (healthSlider != null)
         {
-            healthText.text = "Health: " + currentHealth.ToString("F0"); // Display as integer
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
         }
     }
 }

@@ -2915,8 +2915,9 @@ GameObject:
   - component: {fileID: 205866626}
   - component: {fileID: 205866625}
   - component: {fileID: 205866624}
+  - component: {fileID: 205866628}
   m_Layer: 0
-  m_Name: MazeWalls (95)
+  m_Name: MovingWallTrap4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3008,6 +3009,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &205866628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205866623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &227982732
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,8 +4487,9 @@ GameObject:
   - component: {fileID: 337092013}
   - component: {fileID: 337092012}
   - component: {fileID: 337092011}
+  - component: {fileID: 337092015}
   m_Layer: 0
-  m_Name: MazeWalls (121)
+  m_Name: MovingWallTrap5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4563,6 +4581,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &337092015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337092010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &337730836
 GameObject:
   m_ObjectHideFlags: 0
@@ -10062,8 +10096,9 @@ GameObject:
   - component: {fileID: 815719568}
   - component: {fileID: 815719567}
   - component: {fileID: 815719566}
+  - component: {fileID: 815719570}
   m_Layer: 0
-  m_Name: MazeWalls (79)
+  m_Name: MovingWallTrap1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10155,6 +10190,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &815719570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815719565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &819181527
 GameObject:
   m_ObjectHideFlags: 0
@@ -15817,7 +15868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1263153480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17619,8 +17670,9 @@ GameObject:
   - component: {fileID: 1356725282}
   - component: {fileID: 1356725281}
   - component: {fileID: 1356725280}
+  - component: {fileID: 1356725284}
   m_Layer: 0
-  m_Name: MazeWalls (168)
+  m_Name: MovingWallTrap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17712,6 +17764,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356725284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356725279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &1365851082
 GameObject:
   m_ObjectHideFlags: 0
@@ -19568,8 +19636,9 @@ GameObject:
   - component: {fileID: 1452868883}
   - component: {fileID: 1452868882}
   - component: {fileID: 1452868881}
+  - component: {fileID: 1452868885}
   m_Layer: 0
-  m_Name: MazeWalls (96)
+  m_Name: MovingWallTrap3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19661,6 +19730,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452868885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452868880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &1458852685
 GameObject:
   m_ObjectHideFlags: 0
@@ -25285,8 +25370,9 @@ GameObject:
   - component: {fileID: 1874429505}
   - component: {fileID: 1874429504}
   - component: {fileID: 1874429503}
+  - component: {fileID: 1874429507}
   m_Layer: 0
-  m_Name: MazeWalls (138)
+  m_Name: MovingWallTrap3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25378,6 +25464,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874429507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874429502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5472a027589fd54887d593ddfecc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 20
+  moveSpeed: 15
+  respawnPoint: {fileID: 1552155857}
+  damageAmount: 1
 --- !u!1 &1891312945
 GameObject:
   m_ObjectHideFlags: 0

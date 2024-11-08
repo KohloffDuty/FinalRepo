@@ -9,6 +9,7 @@ public class Item
     public ItemType itemType;
     public int quantity;
     public Sprite icon;
+    public string description;
 
     public Item(string name, ItemType type, int quantity, Sprite icon)
     {
@@ -16,5 +17,6 @@ public class Item
         itemType = type;
         this.quantity = quantity;
         this.icon = icon;
+        this.description = description;
     }
 }

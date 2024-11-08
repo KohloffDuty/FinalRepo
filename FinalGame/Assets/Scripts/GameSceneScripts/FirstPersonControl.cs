@@ -51,6 +51,8 @@ public class FirstPersonControl : MonoBehaviour
     public Material switchMaterial;
     public GameObject[] objectsToChangeColor;
 
+    public Inventory Inventory;
+
 
     private void Awake()
     {
@@ -232,7 +234,13 @@ private void OnEnable()
         LookAround();
         ApplyGravity();
 
+        if (Input.GetKeyDown(KeyCode.G))
+            
+            {
+               Inventory.UseItem("Grenade");
+            }
     }
+ 
 
     public void Move()
     {

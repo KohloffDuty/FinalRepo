@@ -10,6 +10,7 @@ TagManager:
   - PickUp
   - Gun
   - Enemy
+  - QuantityText
   layers:
   - Default
   - TransparentFX

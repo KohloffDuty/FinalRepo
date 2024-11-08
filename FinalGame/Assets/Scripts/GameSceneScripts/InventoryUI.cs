@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject itemSlotPrefab;
     public Transform itemGrid;
     public Inventory playerInventory;
+    public ItemDetailsUI detailsUI;
 
     private Dictionary<string, GameObject> itemSlots = new Dictionary<string, GameObject>();
 
@@ -16,6 +17,10 @@ public class InventoryUI : MonoBehaviour
         UpdateUI();
     }
 
+    public void OnItemSelected(Item item)
+    {
+        detailsUI.ShowItemDetails(item);
+    }
     public void UpdateUI()
     {
         foreach (Transform child in itemGrid)
@@ -27,7 +32,19 @@ public class InventoryUI : MonoBehaviour
         {
             GameObject slot = Instantiate(itemSlotPrefab, itemGrid);
             slot.transform.Find("ItemIcon").GetComponent<Image>().sprite = item.icon;
-            slot.transform.Find("QuantityText").GetComponent<Text>().text = item.quantity.ToString();
+            
+            Text quantityText = slot.GetComponentInChildren<Text>();   
+            if (quantityText != null )
+            {
+                quantityText.text = item.quantity.ToString();
+            }
+
+            else
+            {
+                Debug.LogError("QuantityText Component not found in the itemSlotPrefab");
+            }
+
+           // slot.transform.Find("QuantityText").GetComponent<Text>().text = item.quantity.ToString();
 
             itemSlots[item.itemName] = slot;
         }

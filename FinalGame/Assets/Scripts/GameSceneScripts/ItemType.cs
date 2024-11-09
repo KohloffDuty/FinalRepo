@@ -11,7 +11,9 @@ public class Item
     public Sprite icon;
     public string description;
 
+   
     public Item(string name, ItemType type, int quantity, Sprite icon)
+        
     {
         itemName = name;
         itemType = type;

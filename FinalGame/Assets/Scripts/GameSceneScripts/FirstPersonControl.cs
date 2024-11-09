@@ -239,6 +239,11 @@ private void OnEnable()
             {
                Inventory.UseItem("Grenade");
             }
+
+        if (Input.GetKeyDown (KeyCode.P))
+        {
+            Inventory.UseItem("PowerUp");
+        }
     }
  
 

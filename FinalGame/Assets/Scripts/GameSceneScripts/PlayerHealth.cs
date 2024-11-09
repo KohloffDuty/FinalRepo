@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI; // Add this if you're using Text, or TMPro if using TextMeshPro
-
+using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public Transform respawnPoint;
-   public Slider healthSlider; // Reference to the UI Text component (or use TextMeshPro)
+   public Slider healthSlider; 
     private float currentHealth;
     private Rigidbody rb;
 
@@ -17,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        UpdateHealthUI(); // Initialize the health display
+        UpdateHealthUI(); 
     }
 
     public void TakeDamage(float damage)
@@ -26,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Player took damage: " + damage + " | Current Health: " + currentHealth);
 
-        UpdateHealthUI(); // Update the health display after taking damage
+        UpdateHealthUI(); 
 
         if (currentHealth <= 0)
         {
@@ -38,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died. Respawning");
         currentHealth = maxHealth;
-        UpdateHealthUI(); // Reset health display when respawning
+        UpdateHealthUI(); 
 
         if (rb != null)
         {
@@ -61,5 +60,11 @@ public class PlayerHealth : MonoBehaviour
             healthSlider.maxValue = maxHealth;
             healthSlider.value = currentHealth;
         }
+    }
+
+    public void RestoreToMaxHealth()
+    {
+        currentHealth = maxHealth;
+        Debug.Log("Playerhealth restored to max");
     }
 }

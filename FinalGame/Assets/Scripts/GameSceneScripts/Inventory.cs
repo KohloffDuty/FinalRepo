@@ -3,27 +3,37 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public GameObject inventoryUIPanel;
     public List<Item> items = new List<Item>();
-    public int maxGrenades = 5; // Limit for grenades
-    public int maxPowerUps = 3; // Limit for power-ups
+    public int maxGrenades = 8;
+    public int maxPowerUps = 3;
 
-    // Adds an item to the inventory
+    public void ToggleInventoryUI()
+    {
+        if (inventoryUIPanel != null)
+        {
+            bool isActive = inventoryUIPanel.activeSelf;
+            inventoryUIPanel.SetActive(!isActive);
+            if (!isActive)
+            {
+                FindObjectOfType<InventoryUI>().UpdateUI(); // Update UI on open
+            }
+        }
+    }
+
     public void AddItem(Item item)
     {
         Item existingItem = items.Find(i => i.itemName == item.itemName);
 
         if (existingItem != null)
         {
-            // Update quantity if the item already exists in the inventory
             existingItem.quantity += item.quantity;
         }
         else
         {
-            // Add new item if it doesn't exist in the inventory
             items.Add(item);
         }
 
-        // Enforce maximum limits
         EnforceLimits(item);
     }
 
@@ -39,20 +49,24 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Use an item, e.g., throw a grenade or activate a power-up
     public void UseItem(string itemName)
     {
         Item item = items.Find(i => i.itemName == itemName);
         if (item != null && item.quantity > 0)
         {
-            // Logic to use the item in-game
             item.quantity--;
-
-            // Remove item if quantity reaches zero
             if (item.quantity <= 0)
             {
                 items.Remove(item);
             }
+        }
+    }
+
+    private void Start()
+    {
+        if (inventoryUIPanel != null)
+        {
+            inventoryUIPanel.SetActive(false); // Ensure UI is off initially
         }
     }
 }

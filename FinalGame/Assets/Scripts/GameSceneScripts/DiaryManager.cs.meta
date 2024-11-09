@@ -3,7 +3,10 @@ guid: 588f5be911cf5624a84dd76932c9bef5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - diaryPanel: {fileID: 919132149155446097, guid: 7b6e51c3c4cef8744bf4a2229c3d5723, type: 3}
+  - diaryText: {instanceID: 0}
+  - closeButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

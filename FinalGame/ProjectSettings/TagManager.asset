@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - QuantityText
   - ItemIcon
+  - PowerUp
   layers:
   - Default
   - TransparentFX

@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
         // Check if there's space for the item
         if (HasSpace(item))
         {
-            existingItem.quantity += item.quantity;
+            Item existingItem = items.Find(i => i.itemName == item.itemName);
 
             if (existingItem != null)
             {

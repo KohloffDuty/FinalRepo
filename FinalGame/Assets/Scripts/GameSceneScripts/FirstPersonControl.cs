@@ -23,6 +23,7 @@ public class FirstPersonControl : MonoBehaviour
     private Vector3 velocity;
 
     private CharacterController characterController;
+    private Controls playerInput;
 
     [Header("SHOOTING SETTINGS")]
     [Space(5)]
@@ -57,9 +58,10 @@ public class FirstPersonControl : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        playerInput = new Controls();
     }
 
-   private Controls playerInput;
+  
 
 private void OnEnable()
 {

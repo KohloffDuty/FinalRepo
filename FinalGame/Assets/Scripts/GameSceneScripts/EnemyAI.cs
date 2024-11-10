@@ -11,16 +11,10 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        /*float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= chaseRange)
-        {
-            isChasing = true;
-        }
-        else
-        {
-            isChasing = false;
-        }*/
-       
+        // Calculate distance and set chasing state
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        isChasing = distanceToPlayer <= chaseRange;
+
         if (isChasing)
         {
             ChasePlayer();

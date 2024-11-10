@@ -31,7 +31,7 @@ public class FirstPersonControl : MonoBehaviour
     public float projectileSpeed = 20f;
     public float pickUpRange = 3f;
     public float damage = 20f;
-    private bool holdingGun = false;
+    private bool holdingGun = true;
 
 
     [Header("PICKING UP SETTINGS")]
@@ -209,7 +209,7 @@ private void OnEnable()
             {
                 projectileComponent.damage = damage;
             }
-            Destroy(projectile, 3f);
+            Destroy(projectile, 1f);
             Debug.Log("Projectile shot with damage: + damage");
         }
 

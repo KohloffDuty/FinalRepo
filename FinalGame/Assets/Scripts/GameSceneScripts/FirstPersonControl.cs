@@ -31,7 +31,7 @@ public class FirstPersonControl : MonoBehaviour
     public float projectileSpeed = 20f;
     public float pickUpRange = 3f;
     public float damage = 20f;
-    private bool holdingGun = true;
+    private bool holdingGun = false;
 
 
     [Header("PICKING UP SETTINGS")]

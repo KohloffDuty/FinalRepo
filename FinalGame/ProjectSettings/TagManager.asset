@@ -13,6 +13,7 @@ TagManager:
   - QuantityText
   - ItemIcon
   - PowerUp
+  - EndGoal
   layers:
   - Default
   - TransparentFX

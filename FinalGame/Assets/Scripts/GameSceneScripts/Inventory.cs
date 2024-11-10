@@ -23,18 +23,26 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        Item existingItem = items.Find(i => i.itemName == item.itemName);
-
-        if (existingItem != null)
+        // Check if there's space for the item
+        if (HasSpace(item))
         {
             existingItem.quantity += item.quantity;
+
+            if (existingItem != null)
+            {
+                existingItem.quantity += item.quantity;
+            }
+            else
+            {
+                items.Add(item);
+            }
+
+            EnforceLimits(item);
         }
         else
         {
-            items.Add(item);
+            Debug.Log("No space for this item type in the inventory.");
         }
-
-        EnforceLimits(item);
     }
 
     private void EnforceLimits(Item item)
@@ -47,6 +55,25 @@ public class Inventory : MonoBehaviour
         {
             item.quantity = maxPowerUps;
         }
+    }
+
+    public bool HasSpace(Item item)
+    {
+        if (item.itemType == ItemType.Grenade)
+        {
+            // Find the existing grenade item and check if adding more exceeds the limit
+            Item grenadeItem = items.Find(i => i.itemType == ItemType.Grenade);
+            return grenadeItem == null || grenadeItem.quantity < maxGrenades;
+        }
+        else if (item.itemType == ItemType.PowerUp)
+        {
+            // Find the existing power-up item and check if adding more exceeds the limit
+            Item powerUpItem = items.Find(i => i.itemType == ItemType.PowerUp);
+            return powerUpItem == null || powerUpItem.quantity < maxPowerUps;
+        }
+
+        // For other item types, assume no limit
+        return true;
     }
 
     public void UseItem(string itemName)

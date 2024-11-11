@@ -8068,8 +8068,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 2048973660}
+  pointB: {fileID: 1766072462}
 --- !u!65 &553464845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8998,7 +8998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.9
+      value: -17.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11621,8 +11621,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 1452868884}
+  pointB: {fileID: 1479189590}
 --- !u!65 &756392365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14004,8 +14004,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 554713561}
+  pointB: {fileID: 981518688}
 --- !u!65 &862056839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16904,15 +16904,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.7772
+      value: 24.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.22
+      value: -13.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.2382
+      value: 8.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17378,8 +17378,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 938430627}
+  pointB: {fileID: 293436914}
 --- !u!65 &1105794598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19756,7 +19756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.5
+      value: -16.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b36fd053899d32a46ae5deb5278a4ff1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20230,8 +20230,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 1739292520}
+  pointB: {fileID: 738162732}
 --- !u!65 &1264796633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23671,8 +23671,8 @@ MonoBehaviour:
   player: {fileID: 302203620}
   detectionRange: 7.44
   moveSpeed: 10.15
-  pointA: {fileID: 738162732}
-  pointB: {fileID: 707683023}
+  pointA: {fileID: 776522142}
+  pointB: {fileID: 141640739}
 --- !u!65 &1429357472
 BoxCollider:
   m_ObjectHideFlags: 0

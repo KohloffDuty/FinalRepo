@@ -20,6 +20,5 @@ public class Item
         this.quantity = quantity;
         this.icon = icon;
         this.description = description;
-
     }
 }

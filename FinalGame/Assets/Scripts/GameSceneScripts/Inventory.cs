@@ -7,10 +7,10 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
     public int maxGrenades = 8;
     public int maxPowerUps = 3;
-
-    private InventoryUI inventoryUI;  // Cache reference to InventoryUI
-
-    // Clear inventory when the game starts
+    public GameObject inventoryUIpanel;
+    private InventoryUI inventoryUI;
+   
+    
     private void Start()
     {
         if (inventoryUIPanel != null)

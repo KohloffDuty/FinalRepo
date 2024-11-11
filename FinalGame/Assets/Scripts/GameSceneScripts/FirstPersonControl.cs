@@ -5,10 +5,11 @@ using Unity.VisualScripting;
 //using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
+//using Inventory; // Ensure this is the correct namespace for Inventory
 
 public class FirstPersonControl : MonoBehaviour
 {
-    [ Header("MOVEMENT SETTINGS")]
+    [Header("MOVEMENT SETTINGS")]
     [Space(5)]
     public float moveSpeed;
     public float lookSpeed;
@@ -34,12 +35,10 @@ public class FirstPersonControl : MonoBehaviour
     public float damage = 20f;
     private bool holdingGun = true;
 
-
     [Header("PICKING UP SETTINGS")]
     [Space(5)]
     public Transform holdPosition;
     private GameObject heldObject;
-
 
     [Header("CROUCH SETTINGS")]
     [Space(5)]
@@ -52,8 +51,7 @@ public class FirstPersonControl : MonoBehaviour
     public Material switchMaterial;
     public GameObject[] objectsToChangeColor;
 
-   
-
+    //public Inventory Inventory; // Ensure this is correctly referenced
 
     private void Awake()
     {
@@ -61,12 +59,8 @@ public class FirstPersonControl : MonoBehaviour
         playerInput = new Controls();
     }
 
-  
-
-private void OnEnable()
-{
-        var playerInput = new Controls();
-
+    private void OnEnable()
+    {
         playerInput.Player.Enable();
 
         playerInput.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
@@ -80,16 +74,12 @@ private void OnEnable()
         playerInput.Player.Shoot.performed += ctx => Shoot();
         playerInput.Player.PickUp.performed += ctx => PickUpObject();
 
-        
         playerInput.Player.Crouch.performed += ctx => ToggleCrouch();
 
         playerInput.Player.Interact.performed += ctx => Interact();
-
     }
 
     private bool isCrouching = false;
-
-
 
     public void Interact()
     {
@@ -99,7 +89,6 @@ private void OnEnable()
         if (Physics.Raycast(ray, out hit, pickUpRange))
         {
             if (hit.collider.CompareTag("Switch"))
-
             {
                 foreach (GameObject obj in objectsToChangeColor)
                 {
@@ -110,11 +99,10 @@ private void OnEnable()
                     }
                 }
             }
-        }
-
-        else if (hit.collider.CompareTag("Door"))
-        {
-            StartCoroutine(RaiseDoor(hit.collider.gameObject));
+            else if (hit.collider.CompareTag("Door"))
+            {
+                StartCoroutine(RaiseDoor(hit.collider.gameObject));
+            }
         }
     }
 
@@ -131,6 +119,7 @@ private void OnEnable()
             yield return null;
         }
     }
+
     public void ToggleCrouch()
     {
         isCrouching = !isCrouching;
@@ -150,8 +139,7 @@ private void OnEnable()
         Vector3 cameraPosition = playerCamera.localPosition;
         cameraPosition.y = characterController.height / 2f;
         playerCamera.localPosition = cameraPosition;
-       
-}
+    }
 
     public void PickUpObject()
     {
@@ -174,32 +162,27 @@ private void OnEnable()
                 heldObject = hit.collider.gameObject;
                 heldObject.GetComponent<Rigidbody>().isKinematic = true;
 
-
                 heldObject.transform.position = holdPosition.position;
                 heldObject.transform.rotation = holdPosition.rotation;
                 heldObject.transform.parent = holdPosition;
-
             }
             if (hit.collider.CompareTag("Gun"))
             {
                 heldObject = hit.collider.gameObject;
                 heldObject.GetComponent<Rigidbody>().isKinematic = true;
 
-
                 heldObject.transform.position = holdPosition.position;
                 heldObject.transform.rotation = holdPosition.rotation;
                 heldObject.transform.parent = holdPosition;
 
-                holdingGun = true;  
-
-
+                holdingGun = true;
             }
         }
     }
+
     public void Shoot()
     {
         if (holdingGun)
-
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
@@ -212,20 +195,19 @@ private void OnEnable()
                 projectileComponent.damage = damage;
             }
             Destroy(projectile, 1f);
-            Debug.Log("Projectile shot with damage: + damage");
+            Debug.Log("Projectile shot with damage: " + damage);
         }
-
     }
 
     public void Jump()
     {
         if (characterController.isGrounded)
         {
-            velocity.y =Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-      
     }
-     private void OnMovementPerformed(InputAction.CallbackContext context)
+
+    private void OnMovementPerformed(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
@@ -237,17 +219,15 @@ private void OnEnable()
         ApplyGravity();
 
         if (Input.GetKeyDown(KeyCode.G))
-            
-            {
-               Inventory.UseItem("Grenade");
-            }
-
-        if (Input.GetKeyDown (KeyCode.P))
         {
-            Inventory.UseItem("PowerUp");
+           // Inventory.UseItem("Grenade");
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+           // Inventory.UseItem("PowerUp");
         }
     }
- 
 
     public void Move()
     {
@@ -256,7 +236,6 @@ private void OnEnable()
         move = transform.TransformDirection(move);
 
         characterController.Move(move * moveSpeed * Time.deltaTime);
-
     }
 
     public void LookAround()
@@ -271,6 +250,7 @@ private void OnEnable()
 
         playerCamera.localEulerAngles = new Vector3(verticalLookRotation, 0, 0);
     }
+
     public void ApplyGravity()
     {
         if (characterController.isGrounded && velocity.y < 0)
@@ -280,7 +260,5 @@ private void OnEnable()
 
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
-
     }
 }
- 

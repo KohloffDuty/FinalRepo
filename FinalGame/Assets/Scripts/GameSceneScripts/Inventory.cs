@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject inventoryUIPanel;
+    public GameObject inventoryUIPanel; // Reference to the UI panel
     public List<Item> items = new List<Item>();
     public int maxGrenades = 8;
     public int maxPowerUps = 3;
@@ -17,13 +17,18 @@ public class Inventory : MonoBehaviour
         {
             inventoryUIPanel.SetActive(false); // Ensure UI is off initially
         }
+        else
+        {
+            Debug.LogError("Inventory UIPanel is not assigned in the Inspector!");
+        }
+
         items.Clear();  // Make sure inventory starts empty
 
         // Cache the InventoryUI reference for better performance
         inventoryUI = FindObjectOfType<InventoryUI>();
         if (inventoryUI == null)
         {
-            Debug.LogError("InventoryUI not found in the scene! Make sure it is assigned.");
+            Debug.LogError("InventoryUI not found in the scene! Make sure it is assigned and active.");
         }
     }
 
@@ -38,6 +43,10 @@ public class Inventory : MonoBehaviour
             {
                 inventoryUI.UpdateUI(); // Update UI on open
             }
+        }
+        else
+        {
+            Debug.LogError("Inventory UIPanel is not assigned when toggling UI!");
         }
     }
 
@@ -99,6 +108,7 @@ public class Inventory : MonoBehaviour
             Item powerUpItem = items.Find(i => i.itemType == ItemType.PowerUp);
             return powerUpItem == null || powerUpItem.quantity < maxPowerUps;
         }
+
         return true;  // No limits for other item types
     }
 
@@ -112,14 +122,21 @@ public class Inventory : MonoBehaviour
         }
 
         Item item = items.Find(i => i.itemName == itemName);
+
         if (item != null && item.quantity > 0)
         {
             item.quantity--;
+
             if (item.quantity <= 0)
             {
                 items.Remove(item);  // Remove item from inventory if quantity is 0
             }
+
             inventoryUI.UpdateUI();  // Update UI after using an item
+        }
+        else
+        {
+            Debug.LogWarning($"Attempted to use {itemName}, but it is not available or quantity is zero.");
         }
     }
 }

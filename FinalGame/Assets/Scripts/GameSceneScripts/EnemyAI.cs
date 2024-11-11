@@ -1,62 +1,65 @@
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyFollowIng : MonoBehaviour
 {
-    public Transform player;         // Reference to the player's transform
-    public float moveSpeed = 3f;    // Speed at which the enemy moves
-    public float attackDamage = 10f; // Damage dealt on contact with the player
-    public float chaseRange = 15f;
+    public Transform player;            // Reference to the player's transform
+    public float detectionRange = 10f;  // Range within which the enemy can detect the player
+    public float moveSpeed = 3f;        // Speed at which the enemy moves
+    public Transform pointA;            // First patrol point
+    public Transform pointB;            // Second patrol point
+    private Vector3 targetPosition;     // Current target position for patrolling
+    private bool movingToPointA = true; // Flag to track which point to move towards
 
-    private bool isChasing = false;  // Flag to indicate if the enemy is chasing the player
-
-    private void Update()
+    void Start()
     {
-        // Calculate distance and set chasing state
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        isChasing = distanceToPlayer <= chaseRange;
+        // Set the initial target position to point A
+        targetPosition = pointA.position;
+    }
 
-        if (isChasing)
+    void Update()
+    {
+        // Check if the player is within detection range
+        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
         {
+            // Chase the player
             ChasePlayer();
         }
-    }
-
-    private void ChasePlayer()
-    {
-        // Move towards the player
-        Vector3 direction = (player.position - transform.position).normalized;
-        direction.y = 0;
-        transform.position += direction * moveSpeed * Time.deltaTime;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) // Ensure the player has the "Player" tag
+        else
         {
-            isChasing = true; // Start chasing the player
-            Debug.Log("Player detected! Chasing...");
+            // Patrol between points A and B
+            Patrol();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void Patrol()
     {
-        if (other.CompareTag("Player")) // Ensure the player has the "Player" tag
-        {
-            isChasing = false; // Stop chasing the player
-            Debug.Log("Player left detection zone. Stopping chase.");
-        }
-    }
+        // Move towards the current target position
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player")) // Ensure the player has the "Player" tag
+        // Check if we have reached the target position
+        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            // Switch target position between point A and B
+            if (movingToPointA)
             {
-                playerHealth.TakeDamage(attackDamage); // Deal damage
-                Debug.Log("Player hit! Damage dealt: " + attackDamage);
+                targetPosition = pointB.position;
             }
+            else
+            {
+                targetPosition = pointA.position;
+            }
+            movingToPointA = !movingToPointA; // Toggle the flag
         }
+    }
+
+    void ChasePlayer()
+    {
+        // Move towards the player's position
+        transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+
+        // Optionally: Rotate to face the player
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 }

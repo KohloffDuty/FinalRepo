@@ -51,7 +51,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (tooltipText != null && tooltipText.gameObject.activeSelf)
         {
-            tooltipText.transform.LookAt(Camera.main.transform); // Face the camera 11q1
+            tooltipText.transform.LookAt(Camera.main.transform); // Face the camera 
             tooltipText.transform.Rotate(0, 180, 0); // Flip the text so it isn't backwards
         }
     }

@@ -52,7 +52,7 @@ public class FirstPersonControl : MonoBehaviour
     public Material switchMaterial;
     public GameObject[] objectsToChangeColor;
 
-    public Inventory Inventory;
+   
 
 
     private void Awake()

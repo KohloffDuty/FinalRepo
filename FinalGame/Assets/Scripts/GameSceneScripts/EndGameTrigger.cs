@@ -18,18 +18,18 @@ public class EndGameTrigger : MonoBehaviour
         }
     }
 
-    // Detect when the player reaches the alien UFO
+    // Detect when the player reaches the watch tower
     private void OnTriggerEnter(Collider other)
     {
         // Check if the player triggered the alien UFO's collider
         if (other.CompareTag("Player"))
         {
-            DestroyAlienUFO(); // Call method to destroy alien UFO and end game
+            DestroyWatchTower(); // Call method to destroy tower and end game
         }
     }
 
-    // Method to destroy the alien UFO and load the end game scene
-    void DestroyAlienUFO()
+    // Method to destroy the tower and load the end game scene
+    void DestroyWatchTower()
     {
         // Play destruction sound if available
         if (audioSource != null && destructionSound != null)
@@ -43,7 +43,7 @@ public class EndGameTrigger : MonoBehaviour
             Instantiate(destructionEffect, transform.position, Quaternion.identity);
         }
 
-        // Destroy this GameObject (alien UFO)
+        // Destroy this GameObject (watchtower)
         Destroy(gameObject);
 
         // Transition to the end game scene after a short delay for effects

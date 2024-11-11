@@ -988,9 +988,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &64255170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2322,7 +2325,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 266e0fb9b6b589143904aa2d175d5140, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.894
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4680,9 +4683,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &336737918
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6162,12 +6168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &478835846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6297,12 +6297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 0
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &479373213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6571,12 +6565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &500939810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7555,9 +7543,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!136 &549546044
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8273,12 +8264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &605380489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10862,9 +10847,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &761652905
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11240,7 +11228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1301.67
+      value: 1522.5635
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalScale.z
@@ -11248,7 +11236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.33574
+      value: -22.063
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11256,7 +11244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 83.137886
+      value: 83.134
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11294,10 +11282,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
+      propertyPath: m_TagString
+      value: EndGoal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1643668132}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1643668131}
   m_SourcePrefab: {fileID: 100100000, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
 --- !u!4 &786808014 stripped
 Transform:
@@ -12968,9 +12966,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &882377601
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14779,12 +14780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &1055250198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15118,9 +15113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &1089758420
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15542,9 +15540,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &1119861088
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16754,9 +16755,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &1201399351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16926,9 +16930,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &1203796354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17677,12 +17684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &1282136557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19282,7 +19283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feec5767fd601d42b06658085adc864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endSceneName: EndScene
+  endSceneName: EndGameScene
   destructionEffect: {fileID: 5184043625126375323, guid: a25be5332b67ff34f9eab03bec0eb636, type: 3}
   destructionSound: {fileID: 8300000, guid: 0699374514bca214990edd2b374fb4bf, type: 3}
 --- !u!65 &1375433013
@@ -19638,12 +19639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &1388452411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19896,9 +19891,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &1395660350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23480,6 +23478,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1263153483}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1643668127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c8eff78f6b026fd41a7238ffe0376ce6, type: 3}
+  m_PrefabInstance: {fileID: 785899387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1643668131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643668127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05991057, y: 0.054180775, z: 0.73635024}
+  m_Center: {x: -0.0008676258, y: 0.0012359065, z: -0.26442152}
+--- !u!114 &1643668132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643668127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7feec5767fd601d42b06658085adc864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endSceneName: EndGameScene
+  destructionEffect: {fileID: 5184043625126375323, guid: a25be5332b67ff34f9eab03bec0eb636, type: 3}
+  destructionSound: {fileID: 8300000, guid: 9028a5c1e8089e340a3696108a698b66, type: 3}
 --- !u!1001 &1645174738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24700,12 +24739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &1697063478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27255,12 +27288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &1896120867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27615,12 +27642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!114 &1912775429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29462,12 +29483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Grenande
-    itemType: 0
-    quantity: 1
-    icon: {fileID: 21300000, guid: 0432964c429cd56429c26a6ed670056a, type: 3}
-    description: PowerGrenade
 --- !u!114 &1998783187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29715,9 +29730,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Grenade
-  respawnTime: 2
-  respawnAreaMin: {x: 0, y: 0, z: 0}
-  respawnAreaMax: {x: 0, y: 0, z: 0}
+  item:
+    itemName: 
+    itemType: 0
+    quantity: 0
+    icon: {fileID: 0}
+    description: 
 --- !u!54 &2018606939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29975,12 +29993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &2040082705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31198,12 +31210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601c87fb0d9c2747814902ca42acd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: Health
-    itemType: 1
-    quantity: 1
-    icon: {fileID: 21300000, guid: a5aa5db320f589247a2872375f749129, type: 3}
-    description: 
 --- !u!65 &2145437326
 BoxCollider:
   m_ObjectHideFlags: 0

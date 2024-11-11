@@ -1,65 +1,80 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI; // Required for NavMeshAgent
 
-public class EnemyFollowIng : MonoBehaviour
+public class EnemyAITrigger : MonoBehaviour
 {
-    public Transform player;            // Reference to the player's transform
-    public float detectionRange = 10f;  // Range within which the enemy can detect the player
-    public float moveSpeed = 3f;        // Speed at which the enemy moves
-    public Transform pointA;            // First patrol point
-    public Transform pointB;            // Second patrol point
-    private Vector3 targetPosition;     // Current target position for patrolling
-    private bool movingToPointA = true; // Flag to track which point to move towards
+    public Transform player;                // Reference to the player's transform
+    public Transform pointA;                // First patrol point
+    public Transform pointB;                // Second patrol point
+    public float detectionRange = 10f;      // Trigger radius for detection
+    public float moveSpeed = 3f;            // Speed at which the enemy moves
+    private NavMeshAgent agent;             // Reference to the NavMeshAgent component
+    private bool playerInRange = false;     // Flag to check if player is in range
+    private bool movingToPointA = true;     // Flag to check patrol direction
 
     void Start()
     {
-        // Set the initial target position to point A
-        targetPosition = pointA.position;
+        // Initialize NavMeshAgent and set its speed
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
+
+        // Start patrolling towards point A initially
+        agent.SetDestination(pointA.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the player entered the trigger area
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+            agent.SetDestination(player.position); // Start chasing the player
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the player exited the trigger area
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            Patrol(); // Resume patrolling between points A and B
+        }
     }
 
     void Update()
     {
-        // Check if the player is within detection range
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
+        if (playerInRange)
         {
-            // Chase the player
-            ChasePlayer();
+            // Continuously update destination to follow player if in range
+            agent.SetDestination(player.position);
         }
         else
         {
-            // Patrol between points A and B
-            Patrol();
+            // Continue patrolling if player is not in range
+            if (!agent.pathPending && agent.remainingDistance < 0.1f)
+            {
+                // Switch target between point A and B
+                Patrol();
+            }
         }
     }
 
     void Patrol()
     {
-        // Move towards the current target position
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-        // Check if we have reached the target position
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        // Set the target position based on patrol state
+        if (movingToPointA)
         {
-            // Switch target position between point A and B
-            if (movingToPointA)
-            {
-                targetPosition = pointB.position;
-            }
-            else
-            {
-                targetPosition = pointA.position;
-            }
-            movingToPointA = !movingToPointA; // Toggle the flag
+            agent.SetDestination(pointA.position);
         }
-    }
+        else
+        {
+            agent.SetDestination(pointB.position);
+        }
 
-    void ChasePlayer()
-    {
-        // Move towards the player's position
-        transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-
-        // Optionally: Rotate to face the player
-        Vector3 direction = (player.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        // Toggle the patrol direction
+        movingToPointA = !movingToPointA;
     }
 }

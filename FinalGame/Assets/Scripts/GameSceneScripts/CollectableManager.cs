@@ -5,26 +5,28 @@ using TMPro;
 
 public class CollectableManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI collectedItemsText; // Use SerializeField for inspector visibility
-    private int collectedCount = 0;
+    [SerializeField] private TextMeshProUGUI collectedItemsText; // UI text for displaying collected items
+    private int collectedCount = 0; // Tracks the number of items collected
 
     private void Start()
     {
-        // Initialize the text to show zero collected items at the start
+        // Initialize the UI to display the starting count
         UpdateCollectedItemsUI();
     }
 
-    public void UpdateCollectedItems()
+    // Call this method to increase the collected items count
+    public void AddCollectedItem()
     {
-        collectedCount++;
-        UpdateCollectedItemsUI(); // Update the UI Text
+        collectedCount++; // Increment the count
+        UpdateCollectedItemsUI(); // Update the UI
     }
 
+    // Updates the UI text to reflect the current count
     private void UpdateCollectedItemsUI()
     {
-        if (collectedItemsText != null) // Check if the text component is assigned
+        if (collectedItemsText != null)
         {
-            collectedItemsText.text = "Items Collected: " + collectedCount.ToString();
+            collectedItemsText.text = $"Items Collected: {collectedCount}";
         }
         else
         {
@@ -32,9 +34,10 @@ public class CollectableManager : MonoBehaviour
         }
     }
 
+    // Call this method to reset the count and UI
     public void ResetCollectedCount()
     {
-        collectedCount = 0;
-        UpdateCollectedItemsUI(); // Reset UI display
+        collectedCount = 0; // Reset the count
+        UpdateCollectedItemsUI(); // Reset the UI
     }
 }

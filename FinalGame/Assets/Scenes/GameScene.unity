@@ -6246,7 +6246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptText: {fileID: 1450155660}
   tutorialPrompts:
-  - Press "C" to open Control Menu
+  - Press  "C" for Control Menu
   displayTime: 3
   zoomDuration: 0.5
   zoomScale: {x: 1.2, y: 1.2, z: 1}

@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections; // Required for Coroutines
+
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public Transform respawnPoint;
-   public Slider healthSlider; 
+    public Slider healthSlider;
+    public float respawnDelay = 2f; // Delay before respawn
     private float currentHealth;
     private Rigidbody rb;
 
@@ -16,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        UpdateHealthUI(); 
+        UpdateHealthUI();
     }
 
     public void TakeDamage(float damage)
@@ -25,19 +28,24 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Player took damage: " + damage + " | Current Health: " + currentHealth);
 
-        UpdateHealthUI(); 
+        UpdateHealthUI();
 
         if (currentHealth <= 0)
         {
-            DieAndRespawn();
+            StartCoroutine(DieAndRespawn()); // Start coroutine for respawn
         }
     }
 
-    private void DieAndRespawn()
+    private IEnumerator DieAndRespawn()
     {
-        Debug.Log("Player has died. Respawning");
+        Debug.Log("Player has died. Respawning in " + respawnDelay + " seconds...");
+
+        // Optionally, you can add some death effects or animations here
+        yield return new WaitForSeconds(respawnDelay); // Wait for the delay
+
+        Debug.Log("Respawning now.");
         currentHealth = maxHealth;
-        UpdateHealthUI(); 
+        UpdateHealthUI();
 
         if (rb != null)
         {
@@ -65,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
     public void RestoreToMaxHealth()
     {
         currentHealth = maxHealth;
-        Debug.Log("Playerhealth restored to max");
+        Debug.Log("Player health restored to max");
+        UpdateHealthUI();
     }
 }

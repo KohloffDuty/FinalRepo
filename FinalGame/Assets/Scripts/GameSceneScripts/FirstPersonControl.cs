@@ -185,16 +185,16 @@ public class FirstPersonControl : MonoBehaviour
         if (holdingGun)
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = firePoint.forward * projectileSpeed;
 
             Projectile projectileComponent = projectile.GetComponent<Projectile>();
             if (projectileComponent != null)
             {
-                projectileComponent.damage = damage;
+                projectileComponent.damage = damage; // Set projectile damage
             }
-            Destroy(projectile, 1f);
+
+            Destroy(projectile, 1f); // Optional: destroy after 1 second if not hit anything
             Debug.Log("Projectile shot with damage: " + damage);
         }
     }
